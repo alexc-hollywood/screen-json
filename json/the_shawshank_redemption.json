@@ -1,0 +1,115 @@
+{
+  "id": "37bd3b1b-160a-4a65-bbf2-7c92d400fbc1",
+  "uuid" : "rfc4122",
+  "title": "THE SHAWSHANK REDEMPTION",
+  "lang": "EN",
+  "locale" : "en-US",
+  "charset" : "utf8",
+  "dir" : "ltr",
+  "revisions" : [
+    {
+      "index": 0,
+      "version": "draft",
+      "date" : "2004-02-12T15:19:21+00:00"
+    },
+    {
+      "index": 1,
+      "version": "blue",
+      "date" : "2004-06-25T15:19:21+00:00"
+    },
+    {
+      "index": 2,
+      "version": "pink",
+      "date" : "2005-01-10T15:19:21+00:00"
+    }
+  ] ,
+  "authors": [
+    {
+      "id": "01979fca-6ac3-479e-9f33-d89498836eb1",
+      "first" : "Frank",
+      "last": "Darabont"
+    }
+  ],
+  "contributors": [
+    {
+      "id": "8e0cd67f-f9da-46b8-98b9-16169893b439",
+      "first" : "John",
+      "last": "Doe",
+      "roles" : ["doctor", "editor"]
+    }
+  ],
+  "license" : {
+    "identifier": "CC-BY-NC-ND-4.0",
+    "ref": "https://spdx.org/licenses/"
+  },
+  "registrations": [
+    {
+      "authority": "WGA",
+      "identifier" : "4847494058",
+      "created" : "2004-02-12T15:19:21+00:00",
+      "modified" : "2004-02-12T15:19:21+00:00"
+    }
+  ],
+  "derivation": {
+    "id" : "3608b093-1280-4834-9ea4-d9d2b8d711a6",
+    "type": "novella",
+    "title": "Rita Hayworth and Shawshank Redemption",
+    "meta" : {
+      "isbn": "978-0896214408",
+      "comments" : "Based upon the story Rita Hayworth and Shawshank Redemption by Stephen King"
+    }
+  },
+  "encryption" : {
+    "cipher" : "aes-256-ctr",
+    "encoding" : "hex"
+  },
+  "taggable" : [
+    "cast", "extras", "stunts", "vehicles", "props", "SFX", "costumes", "makeup", "animals", "animal-handler", "music", "sound", "set-dressing", "greenery", "special-equipment", "security", "additional-labor", "VFX", "MFX", "misc"
+  ],
+  "document" : {
+    "bookmarks" : [
+      {
+        "title" : "Friendly name here",
+        "index" : 14
+      }
+    ],
+    "cover": {
+      "lang" : "EN",
+      "title" : "THE SHAWSHANK REDEMPTION",
+      "author" : "Frank Darabont",
+      "original" : "Based upon the story Rita Hayworth and Shawshank Redemption by Stephen King"
+    },
+    "header" : {
+      "lang" : "EN",
+      "cover" : true,
+      "display" : true,
+      "start": 1,
+      "omit" : [],
+      "content" : "THE SHAWSHANK REDEMPTION by Frank Darabont"
+    },
+    "footer" : {
+      "lang" : "EN",
+      "cover" : true,
+      "display" : true,
+      "start": 1,
+      "omit" : [],
+      "content" : "(c) __DATE__ Copyright Castle Rock Entertainment. __PAGE__"
+    },
+    "meta": {
+      "created" : "2004-02-12T15:19:21+00:00",
+      "modified" : "2004-02-12T15:19:21+00:00"
+    },
+    "styles": [
+      {
+        "id" : "default",
+        "content" : "font-family: courier; font-size: 12px;"
+      }
+    ],
+    "templates": [
+      "default"
+    ],
+    "scenes" : [
+
+    ]
+  }
+}
