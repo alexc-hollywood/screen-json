@@ -33,6 +33,10 @@ Authoring Program -->
 ## Why the data-driven approach is necessary
 In the 1930s, screenplays were written with a typewriter, by qualified insiders who understood the Warner print formatting. In the desktop PC and web age, anyone with a copy of *Final Draft Pro* can produce a script. The market is flooded, and quality has nose-dived. Everyone is on the lookout for the new best thing out there, but overwhelmed with the material that needs coverage and triage.
 
+As Netflix's success has shown, in the digital era, film is a *data* business.
+
+And as **Adobe Story's Pace** analysis (https://helpx.adobe.com/story/help/pace-beta.html) has shown, linguistic analysis can be extremely helpful to writers.
+
 **Scenario A: Too Many Scripts, Not Enough Time**
 
 You are a development executive at a major studio. You receive 200 script submissions a week, in the post, via email, and online (e.g. the Black List). You have 10 readers, each processing 20 scripts a week, or 4 a day, at a cost of $50/script. Each reader can do 1 coverage in the morning, and another in the afternoon. Just keeping them at work costs you $40,000 a month, and you still have 200 reviews on your desk at the end.
@@ -209,6 +213,23 @@ The container `Document` object describes the content of the document, but leave
       "last": "Darabont"
     }
   ],
+  "colors": [
+    {
+      "title" : "blue",
+      "rgb" : [0,0,255],
+      "hex" : "#0000FF"
+    },
+    {
+      "title" : "pink",
+      "rgb" : [255,192,203],
+      "hex" : "#FFC0CB"
+    },
+    {
+      "title" : "purple",
+      "rgb" : [128,0,128],
+      "hex" : "#800080"
+    }
+  ],
   "contributors": [
     {
       "id": "8e0cd67f-f9da-46b8-98b9-16169893b439",
@@ -246,11 +267,18 @@ The container `Document` object describes the content of the document, but leave
     "cast", "extras", "stunts", "vehicles", "props", "SFX", "costumes", "makeup", "animals", "animal-handler", "music", "sound", "set-dressing", "greenery", "special-equipment", "security", "additional-labor", "VFX", "MFX", "misc"
   ],
   "document" : {
-    "bookmarks" : [
-      {
-        "title" : "Friendly name here",
-        "index" : 14
-      }
+	 "bookmarks" : [
+	    {
+	        "scene": 4,
+	        "type": "action",
+	        "element": 2,
+	        "title": {
+	            "en": "Start"
+	        },
+	        "description": {
+	            "en": ""
+	        }
+	    }
     ],
     "cover": {
       "lang" : "EN",
@@ -366,6 +394,8 @@ The `Body` property of a Scene is an *array* of `Element` objects, which differ 
   "omitted": false,
   "locked": false,
   "encrypted" : false,
+  "element": "p",
+  "class": "col-md-12",
   "access" : ["ABL", "cast", "cinematography", "locations", "wardrobe", "vfx", "sfx"],
   "revision" : {
     "version": 1.0,
@@ -450,7 +480,7 @@ var dialogue_element = encrypt("I'm going to make him an offer he can't refuse."
 console.log(decrypt(dialogue_element));
 ```
 
-Encrypted output (Base64):
+Encrypted output (when using Base64, not Hex):
 
 ```
 U2FsdGVkX19voPV6ClqPfhSFJFMEALJeZSmAVl/dukvbxtfFOondqaZLVdRg0/HxBV8g8B9iZYzYY2Aa/cH7Kw==
@@ -463,9 +493,12 @@ The dialogue data element would then be expressed as:
   "lang": "EN",
   "omitted": false,
   "locked": true,
-  "policies" : ["ABL", "director", "cinematography", "actor-corleone"],
+  "access" : ["ABL", "director", "cinematography", "actor-corleone"],
   "type": "dialogue",
-  "version" : "0.1",
+  "revision": {
+	    "version": 1,
+	    "modified": "2017-03-04T00:34:32+00:00"
+  },
   "element": "p",
   "class": "col-md-12",
   "content" : "U2FsdGVkX19voPV6ClqPfhSFJFMEALJeZSmAVl/dukvbxtfFOondqaZLVdRg0/HxBV8g8B9iZYzYY2Aa/cH7Kw==",
@@ -477,11 +510,53 @@ The dialogue data element would then be expressed as:
   ],
   "meta": {
 	"cipher" : "aes-256-ctr",
-    "auth": : "director"
+    "auth" : "director"
   }
 }
 ```
 
+## Database Querying
+
+Once stored in a back-end NoSQL database (like MongoDB, CouchDB, Neo4j, or even HTML5 localStorage), we suddenly have a way to search the movie.
+
+![](mongo_record.png?raw=true)
+
+## Natural Language Processing (NLP)
+
+Definition:
+
+>>Natural language processing (NLP) is a field of computer science, artificial intelligence, and computational linguistics concerned with the interactions between computers and human (natural) languages and, in particular, concerned with programming computers to fruitfully process large natural language corpora. Challenges in Natural Language Processing frequently involve natural language understanding, natural language generation (frequently from formal, machine-readable logical forms), connecting language and machine perception, managing human-computer dialog systems, or some combination thereof.
+
+#### Syntax
+
+- https://en.wikipedia.org/wiki/Lemmatisation
+- https://en.wikipedia.org/wiki/Morphology_(linguistics)
+- https://en.wikipedia.org/wiki/Part-of-speech_tagging
+- https://en.wikipedia.org/wiki/Parsing
+- https://en.wikipedia.org/wiki/Sentence_boundary_disambiguation
+- https://en.wikipedia.org/wiki/Stemming
+- https://en.wikipedia.org/wiki/Text_segmentation#Word_segmentation
+
+#### Semantics
+
+- https://en.wikipedia.org/wiki/Lexical_semantics
+- https://en.wikipedia.org/wiki/Machine_translation
+- https://en.wikipedia.org/wiki/Named-entity_recognition
+- https://en.wikipedia.org/wiki/Natural_language_generation
+- https://en.wikipedia.org/wiki/Natural_language_understanding
+- https://en.wikipedia.org/wiki/Optical_character_recognition
+- https://en.wikipedia.org/wiki/Question_answering
+- https://en.wikipedia.org/wiki/Textual_entailment
+- https://en.wikipedia.org/wiki/Relationship_extraction
+- https://en.wikipedia.org/wiki/Sentiment_analysis
+- https://en.wikipedia.org/wiki/Topic_segmentation
+- https://en.wikipedia.org/wiki/Word_sense_disambiguation
+
+#### Discourse
+
+- https://en.wikipedia.org/wiki/Automatic_summarization
+- https://en.wikipedia.org/wiki/Coreference
+- https://en.wikipedia.org/wiki/Discourse_analysis
 
 ## Research Papers
 
