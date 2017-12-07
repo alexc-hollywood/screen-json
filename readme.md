@@ -4,8 +4,10 @@
   <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
 
 Author: **Alex Coppen** (azcoppen@protonmail.com)
+
+The idea is pretty simple: 1) we need to be able to programmatically **query** screenplays, and 2) the file formats used in desktop screenwriting programs are a chaotic mess that don't translate well to the web. Screenplay documents are missing a data model that we can import/export across them, which can also be used in web-based screenwriting platforms (e.g. Amazon, WriterDuet).
   
-Part of the **CineJSON** family of film/TV object notation proposals.
+Part of a set of drafts that form a family of **CineJSON** film/TV object notation proposals.
 
 ScreenJSON is a data model and object notation/interchange syntax for film and TV screenplays. In essence, it is "screenplays for computers". It is offered freely for anyone to use or adapt under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
 
